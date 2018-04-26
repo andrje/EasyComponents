@@ -18,7 +18,7 @@ FSMPlayerIdle::~FSMPlayerIdle()
 // handle input
 FSMPlayerVirtual* FSMPlayerIdle::handle_input()
 {
-
+	return nullptr;
 }
 
 
