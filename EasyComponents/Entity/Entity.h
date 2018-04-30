@@ -48,7 +48,7 @@ private:
 
 // add component
 template<typename T>
-inline void Entity::add_component(const std::string& name)	// MAKE OVERLOAD FOR THIS. ONE WITH NAME, ONE WITHOUT
+inline void Entity::add_component(const std::string& name)	// MAYBE OVERLOAD. ONE WITH NAME, ONE WITHOUT
 {
 	auto it = m_components_.find(name);
 	if (it == m_components_.end())

@@ -25,5 +25,5 @@ FSMPlayerVirtual* FSMPlayerIdle::handle_input()
 // update
 void FSMPlayerIdle::update()
 {
-
+	
 }

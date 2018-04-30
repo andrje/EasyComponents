@@ -8,7 +8,7 @@
 #include "../ShapeVecs/ShapeVecs.h"
 
 
-// static init
+// static init for map of function ptrs
 const creator_funcs_map ShapeType::m_creator_funcs_ = 
 {
 	{ "triangle",	&ShapeType::get_triangle_vec },

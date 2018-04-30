@@ -7,7 +7,7 @@
 #include "../Components/ShapeComponent/ShapeType/ShapeType.h"
 
 #include "../Input/Input.h"
-#include "SFML\Window\Keyboard.hpp"
+#include "SFML/Window/Keyboard.hpp"
 
 
 // cTor
@@ -68,8 +68,7 @@ const void Entity::update(const float deltaT)
 
 	if (width < 50.0 && tmp_bool_)
 		tmp_bool_ = false;
-
-	if (width > 100.0 && !tmp_bool_)
+	else if (width > 100.0 && !tmp_bool_)
 		tmp_bool_ = true;
 
 	if (!tmp_bool_)
@@ -77,8 +76,7 @@ const void Entity::update(const float deltaT)
 		get_component<ShapeComponent>("Shapes_1")->get_shape("MyShape_1")->scale_shape(1.005);
 		get_component<ShapeComponent>("Shapes_1")->get_shape("MyShape_3")->scale_shape(0.995);
 	}
-
-	if (tmp_bool_)
+	else
 	{
 		get_component<ShapeComponent>("Shapes_1")->get_shape("MyShape_1")->scale_shape(0.995);
 		get_component<ShapeComponent>("Shapes_1")->get_shape("MyShape_3")->scale_shape(1.005);
